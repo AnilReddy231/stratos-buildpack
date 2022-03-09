@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-NODE_VERSION="13.12.0"
+NODE_VERSION="16.14.0"
 
 DOWNLOAD_FOLDER=${CACHE_DIR}/Downloads
 mkdir -p ${DOWNLOAD_FOLDER}
@@ -16,8 +16,8 @@ if [ ! -f ${DOWNLOAD_FILE} ]; then
   # Delete any cached node downloads, since those are now out of date
   rm -rf ${DOWNLOAD_FOLDER}/node*.tar.gz
 
-  NODE_SHA256="5c951ab4392e60491cef7687f997a45ef2e9848d84409d10fd8b9ee9ba52232b"
-  URL=https://buildpacks.cloudfoundry.org/dependencies/node/node_13.12.0_linux_x64_cflinuxfs3_5c951ab4.tgz
+  NODE_SHA256="ec30e9b58bb91c3e87b848c9fcd49ab2f5d064dd84b5e09cc49d65a1f88fe8da"
+  URL=https://buildpacks.cloudfoundry.org/dependencies/node/node_16.14.0_linux_x64_cflinuxfs3_ec30e9b5.tgz
   
   echo "-----> Download Nodejs ${NODE_VERSION}"
   curl -s -L --retry 15 --retry-delay 2 $URL -o ${DOWNLOAD_FILE}
