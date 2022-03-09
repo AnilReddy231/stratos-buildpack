@@ -5,7 +5,11 @@ include_files:
   - bin/compile
   - bin/detect
   - bin/release
-  - bin/supply
-  - bin/finalize
+  # - bin/supply
+  # - bin/finalize
   - manifest.yml
   - README.md
+  - scripts/install_dep.sh
+  - scripts/install_go.sh
+  - scripts/install_glide.sh
+  - scripts/install_nodejs.sh
